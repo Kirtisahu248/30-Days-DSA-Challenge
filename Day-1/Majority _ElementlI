@@ -1,0 +1,18 @@
+class Solution {
+    public List<Integer> majorityElement(int[] nums) {
+        int n = nums.length;
+        int val = n/3;
+        HashMap<Integer,Integer> elem = new HashMap<>();
+        ArrayList<Integer>ans = new ArrayList<>();
+        for(int i : nums){
+            //update the frequency
+            elem.put(i,elem.getOrDefault(i,0)+1);
+
+              // Check if the updated frequency is greater than val and not already in the list
+                if(elem.get(i) > val && !ans.contains(i)){
+                    ans.add(i);
+                }
+         }
+        return ans;
+    }
+}
