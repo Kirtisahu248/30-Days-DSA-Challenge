@@ -1,0 +1,22 @@
+class Solution {
+    public int[] rearrangeArray(int[] nums) {
+        int n = nums.length;
+        int[] ans = new int[n];
+        ArrayList<Integer> posNo = new ArrayList<>();
+        ArrayList<Integer> negNo = new ArrayList<>();
+
+        for(int i=0;i<n;i++){
+            if(nums[i]>0){
+                posNo.add(nums[i]);
+            }
+            else{
+                negNo.add(nums[i]);
+            }
+        }
+        for(int i=0;i<n/2;i++){
+            ans[2*i] = posNo.get(i);
+            ans[2*i+1] = negNo.get(i);
+        }
+        return ans;
+    }
+}
