@@ -1,0 +1,15 @@
+class Solution {
+    public String largestOddNumber(String num) {
+         int n = num.length();
+    // Start from the end of the string
+    for (int i = n - 1; i >= 0; i--) {
+        // Check if the current character represents an odd digit
+        if ((num.charAt(i) - '0') % 2 != 0) {
+            // Return the substring from the start to this index (inclusive)
+            return num.substring(0, i + 1);
+        }
+    }
+    // If no odd digit is found, return an empty string
+    return "";
+    }
+}
