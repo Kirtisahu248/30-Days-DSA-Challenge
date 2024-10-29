@@ -64,7 +64,7 @@ The repository is organized as follows:
 
 ## 📚 Resources and References
 
-- [Striver's SDE Sheet](https://takeuforward.org/interview/strivers-sde-sheet-top-coding-interview-problems/)
+- [Striver's SDE Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2)
 - [LeetCode](https://leetcode.com/)
 - [GeeksforGeeks](https://www.geeksforgeeks.org/)
 - [Coding Ninjas](https://www.codingninjas.com/)

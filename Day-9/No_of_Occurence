@@ -1,0 +1,14 @@
+
+
+class Solution {
+    int count(int[] arr, int k) {
+        // code here
+        int cnt =0;
+        for (int i=0; i<arr.length;i++){
+            if(arr[i] == k){
+                cnt ++;
+            }
+        }
+        return cnt;
+    }
+}
