@@ -1,0 +1,45 @@
+// Using the concept of Upper & lower Bound
+class Solution {
+    public int lowerBound(int[] nums, int target){
+        int n = nums.length;
+        int low = 0;
+        int high = n-1;
+        int first = n;
+        while(low <= high){
+            int mid = (low + high)/2;
+            if(nums[mid] >= target){
+                first = mid;
+                high = mid - 1;
+            }
+            else{
+                low = mid + 1;
+            }
+        }
+        return first;
+    }
+    public int upperBound(int[] nums, int target){
+        int n = nums.length;
+        int low = 0;
+        int high = n-1;
+        int last = n;
+        while(low <= high){
+            int mid = (low + high)/2;
+            if(nums[mid] > target){
+                last = mid;
+                 high = mid - 1;
+            }
+            else{
+                 low = mid + 1;
+            }
+        }
+        return last;
+    }
+    public int[] searchRange(int[] nums, int target) {
+        int n = nums.length;
+        int lower_bound = lowerBound(nums,target);
+        if( lower_bound == n || nums[lower_bound]!= target){
+            return new int[] {-1,-1};
+        }
+        return new int[] {lower_bound , upperBound(nums,target)-1};
+    }
+}
