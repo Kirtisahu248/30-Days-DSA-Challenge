@@ -19,3 +19,18 @@ class Solution {
         return high;
     }
 }
+
+
+/* *
+ * Points To Remember
+ * Math.ceil() => function is used  to round a number up to the nearest integer.
+ * In Java, to format a number and print decimal digits up to a specified precision (e.g., up to 2 or 3 decimal places)
+ * 
+ *Using System.out.printf() :----->
+   This method is simple and straightforward for formatting output.
+   
+   *Example:
+  double num = 123.456789;
+  System.out.printf("Formatted to 2 decimal places: %.2f%n", num); // Output: 123.46
+
+*/

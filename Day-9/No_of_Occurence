@@ -1,5 +1,4 @@
-
-
+//brute force 
 class Solution {
     int count(int[] arr, int k) {
         // code here
