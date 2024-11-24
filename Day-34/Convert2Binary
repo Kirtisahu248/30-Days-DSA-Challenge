@@ -1,0 +1,25 @@
+class Solution{
+    // Reverse a string
+    String reverse(String s) {
+        String ans = "";
+        for (int i = s.length() - 1; i >= 0; i--) {
+            ans += s.charAt(i);
+        }
+        return ans;
+    }
+
+    // Convert an integer to binary string
+    String convert2Binary(int n) {
+        String res = "";
+        while (n > 0) {
+            if ((n & 1) == 1) { // Check if the last bit is 1
+                res += "1";
+            } else {
+                res += "0";
+            }
+            n = n / 2; // Equivalent to n = n >> 1
+        }
+        res = reverse(res); // Reverse the binary string
+        return res;
+    }
+}
